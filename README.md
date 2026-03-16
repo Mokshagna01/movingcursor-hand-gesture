@@ -1,18 +1,19 @@
-# Hand Gesture Cursor Control
+# Hand Gesture Control System
 
-## Overview
+A computer vision project that allows users to control the computer using **hand gestures**.
+This project uses **Python, OpenCV, and MediaPipe** to detect hand landmarks through the webcam and perform different actions like controlling the mouse cursor.
 
-This project demonstrates a simple **hand gesture based mouse cursor control system** using a webcam.
-The program tracks the **index finger of a hand** using computer vision and moves the mouse cursor on the screen accordingly.
-
-It uses real-time hand tracking to convert **hand movements into cursor movements**, enabling touch-free computer interaction.
+---
 
 ## Features
 
-* Real-time hand detection using a webcam
-* Cursor movement using index finger position
-* Smooth cursor motion
-* Simple and lightweight implementation
+* Move mouse cursor using hand gestures
+* Detect finger positions using MediaPipe
+* Real-time hand tracking
+* Gesture-based interaction with the computer
+* Webcam-based control system
+
+---
 
 ## Technologies Used
 
@@ -20,39 +21,97 @@ It uses real-time hand tracking to convert **hand movements into cursor movement
 * OpenCV
 * MediaPipe
 * PyAutoGUI
+* NumPy
+
+---
+
+## Project Structure
+
+```
+hand-gesture-control
+│
+├── movingcursor.py
+├── gesture_click.py
+├── gesture_scroll.py
+└── README.md
+```
+
+---
 
 ## How It Works
 
-1. The webcam captures live video.
-2. MediaPipe detects the hand landmarks.
-3. The program identifies the **index finger tip position**.
-4. The finger position is mapped to screen coordinates.
-5. The mouse cursor moves according to the finger movement.
+1. The webcam captures real-time video.
+2. MediaPipe detects hand landmarks.
+3. Finger positions are analyzed.
+4. Specific gestures trigger actions like:
+
+   * Moving the cursor
+   * Clicking
+   * Scrolling
+
+---
 
 ## Installation
 
-Install the required libraries:
+Clone the repository:
 
-pip install opencv-python mediapipe pyautogui
+```
+git clone https://github.com/Mokshagna01/movingcursor-hand-gesture.git
+```
 
-## Run the Program
+Go to the project folder:
 
-Run the script using:
+```
+cd movingcursor-hand-gesture
+```
 
+Install required libraries:
+
+```
+pip install opencv-python mediapipe pyautogui numpy
+```
+
+---
+
+## Run the Project
+
+Example:
+
+```
 python movingcursor.py
+```
 
-## Controls
+Make sure your **webcam is enabled**.
 
-* Move your **index finger** to control the mouse cursor.
-* Press **Q** to close the webcam and exit the program.
+---
+
+## Applications
+
+* Touchless computer interaction
+* Accessibility tools
+* Gesture-based interfaces
+* Computer vision learning project
+
+---
 
 ## Future Improvements
 
-* Add gesture based mouse click
-* Add scrolling gesture
-* Add drag and drop gesture
-* Improve gesture recognition accuracy
+* Add more gesture commands
+* Improve gesture accuracy
+* Add gesture training model
+* Build a GUI interface
+
+---
 
 ## Author
 
-Mokshagna
+Mokshagna Rajulapati
+
+AI & Machine Learning Enthusiast
+Interested in Computer Vision, NLP, and Multilingual AI Systems.
+
+---
+
+## License
+
+This project is open source and available for learning and research purposes.
